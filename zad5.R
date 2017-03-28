@@ -15,4 +15,3 @@ f=factor(sort(Species))
 f
 names(f)<- c("setosa", "versicolor", "virginica")
 f
-
