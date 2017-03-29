@@ -1,7 +1,10 @@
-my_func = function(t){
-  x=1.9:1432
-  y=median(x)
-  return(c(y))
+median <- function(x) {
+  z=sort(x)
+  if((length(z)%%2)!=0){
+    result = z[(length(x)/2)+1]
+  }
+  else
+    result = (z[length(x)/2]+z[length(x)/2+1])/2
+  return(result)
 }
-my_func(t)
-
+median(iris$Sepal.Length)
