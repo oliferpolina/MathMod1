@@ -52,3 +52,4 @@ qplot(flowrate, co2_flux, data = tbl_numeric, alpha = I(1/10)) + theme_bw() + ge
 #lm(earn ~ . - age, data = wages)
 anova(mod)
 
+
