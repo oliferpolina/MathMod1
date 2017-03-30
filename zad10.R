@@ -36,7 +36,6 @@ names(tbl_numeric)
 cor_td = cor(drop_na(tbl_numeric)) %>% as.data.frame %>% select(co2_flux)
 vars = row.names(cor_td)[cor_td$co2_flux^2 > .1] %>% na.exclude
 formula = as.formula(paste("co2_flux~", paste(vars,collapse = "+"), sep=""))
-formula1 = as.formula(paste("co2_flux", paste(vars,collapse = "+"), sep=""))
 teaching_tbl = sample_n(tbl, floor(length(tbl$date)*.7))
 testing_tbl = sample_n(tbl, floor(length(tbl$date)*.3))
 tbl_numeric = filter(tbl_numeric, DOY > 151)
