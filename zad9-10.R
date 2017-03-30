@@ -30,18 +30,4 @@ Spirmen=function(x1,x2)
   result=1-6*sum/(length(x1)*(length(x1)**2-1))
   return(result)  
 }
-med=function(elements)
-{
-  elements=elements[order(elements)]
-  if(length(elements)%%2==0)
-  {
-    n=length(elements)%/%2
-    element=(elements[n]+elements[n+1])/2
-  }
-  else
-  {
-    element=elements[length(elements)%/%2+1]
-  }
-  return(element)
-}
 
